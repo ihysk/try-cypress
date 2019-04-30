@@ -16,4 +16,10 @@ describe('My First Test', function() {
       .type('fake@email.com')
       .should('have.value', 'fake@email.com')
   })
+
+  it('Visits Google page', function() {
+    cy.visit('https://google.com')
+
+    cy.get('input').type('test').click()
+  })
 })
